@@ -1,0 +1,266 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #050608;
+    color: #f5f6f6;
+    font-weight: 400;
+    height: 100vh;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+* {
+    box-sizing: border-box;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style-type: none;
+}
+
+.intro-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 10px 0;
+    color: #6fc28a;
+}
+
+input {
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid #f5f6f6;
+    max-width: 450px;
+    height: 40px;
+    text-align: center;
+    color: #f5f6f6;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.hangman-container {
+    width: 152px;
+    margin: 0 auto 40px;
+    position: relative;
+}
+
+.man {
+    width: 50px;
+    height: 124px;
+    margin: 0 auto;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    right: -11px;
+    top: 34px;
+}
+
+.man li, .man div {
+    background-color: #f5f6f6;
+    width: 6px;
+    border-radius: 10px;
+}
+
+.man .head{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+}
+
+.body {
+    height: 50px;
+    position: relative;
+}
+
+.army, .leg {
+    position: absolute;
+    height: 40px;
+}
+
+.army {
+    top: -2px;
+}
+.leg {
+    bottom: -30px;
+}
+.army.left, .leg.left {
+    transform: rotate(30deg);
+    left: -11px;
+}
+.army.right, .leg.right {
+    transform: rotate(-30deg);
+    left: 11px;
+}
+
+.head, .army, .body, .leg {
+    display: none;
+}
+
+.forca {
+    width: 130px;
+    position: relative;
+    margin: 0 auto;
+}
+.forca li {
+    background-color: #f5f6f6;
+}
+.forca .part-1 {
+    width: 100px;
+    height: 6px;
+    margin-left: 24px;
+}
+.forca .part-2 {
+    width: 6px;
+    height: 190px;
+    margin-left: 24px;
+}
+.forca .part-3 {
+    width: 55px;
+    height: 6px;
+}
+.forca .part-4 {
+    width: 6px;
+    height: 35px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.wrap-keyboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#letterList {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin-bottom: 45px;
+    flex-wrap: wrap;
+}
+
+#letterList li {
+    width: 35px;
+    margin: 0 4px;
+    border-bottom: 2px solid #6fc28a;
+    padding: 0 3px;
+    color: #050608;
+    text-align: center;
+}
+
+#letterList li.show {
+    color: #f5f6f6;
+}
+
+#letterList li.space {
+    border-bottom: 0;
+    color: #050608;
+}
+
+.tip-text {
+    text-align: center;
+    font-size: 19px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    max-width: 355px;
+    margin: 0 auto;
+}
+
+.result-box{
+    width: 100%;
+    background-color: #050608;
+    text-align: center;
+    text-transform: uppercase;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: .5;
+    transition: opacity .5s ease-out;
+    -moz-transition: opacity .5s ease-out;
+    -webkit-transition: opacity .5s ease-out;
+    -o-transition: opacity .5s ease-out;
+}
+
+.show-result-box {
+    display: flex;
+    opacity: 1;
+}
+.img-result {
+    width: 310px;
+    margin-bottom: 30px;
+}
+
+.result-box h3{
+    color: #6fc28a;
+    text-transform: uppercase;
+    font-size: 27px;
+    font-weight: 800;
+    margin: 15px 0;
+}
+
+.btn {
+    border: 0;
+    background-color: #48286c;
+    color: #6fc28a;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #5d3986;
+}
+.keyboard li {
+    background-color: #48286c;
+    color: #6fc28a;
+    text-transform: uppercase;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 3px;
+    line-height: 40px;
+    margin: 5px;
+    cursor: pointer;
+}
+.keyboard li:hover {
+    background-color: #5d3986;
+}
+.keyboard li.disable {
+    opacity: .4;
+    cursor: default;
+}
+
+.hide {
+    display: none;
+}

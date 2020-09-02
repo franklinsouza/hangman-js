@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Hangman game</title>
+</head>
+<body>
+    <div class="intro-screen">
+        <label for="word">Palavra</label>
+        <input type="text" id="word">
+        <label for="tip">Dica</label>
+        <input type="text" id="tip">
+        <button class="btn" id="start-game">Iniciar</button>
+    </div>
+
+
+    <div class="game-screen hide">
+        <div class="hangman-container">
+            <ul class="forca">
+                <li class="part-1"></li>
+                <li class="part-2"></li>
+                <li class="part-3"></li>
+                <li class="part-4"></li>
+            </ul>
+
+            <ul class="man">
+                <li class="head"></li>
+                <li class="body">
+                    <div class="army left"></div>
+                    <div class="army right"></div>
+                    <div class="leg left"></div>
+                    <div class="leg right"></div>
+                </li>
+            </ul>
+        </div>
+
+        <ul id="letterList"></ul>
+
+        <div class="wrap-keyboard">
+            <p class="tip-text">Dica: <span class="word-tip"></span></p>
+
+            <ul class="keyboard" id="keyboard02">
+                <li data-key="a">a</li>
+                <li data-key="b">b</li>
+                <li data-key="c">c</li>
+                <li data-key="d">d</li>
+                <li data-key="e">e</li>
+                <li data-key="f">f</li>
+                <li data-key="g">g</li>
+                <li data-key="h">h</li>
+                <li data-key="i">i</li>
+                <li data-key="j">j</li>
+                <li data-key="k">k</li>
+                <li data-key="l">l</li>
+                <li data-key="m">m</li>
+                <li data-key="n">n</li>
+                <li data-key="o">o</li>
+                <li data-key="p">p</li>
+                <li data-key="q">q</li>
+                <li data-key="r">r</li>
+                <li data-key="s">s</li>
+                <li data-key="t">t</li>
+                <li data-key="u">u</li>
+                <li data-key="v">v</li>
+                <li data-key="w">w</li>
+                <li data-key="x">x</li>
+                <li data-key="y">y</li>
+                <li data-key="z">z</li>
+            </ul>
+        </div>
+
+
+        <div class="result-box win">
+            <img src="./assets/think-about-it.gif" class="img-result" alt="ué...">
+            <h3>Você venceu...</h3>
+            <a href="./index.html" class="btn">Nova partida</a>
+        </div>
+
+        <div class="result-box lose">
+            <img src="./assets/pulp-fiction.gif" class="img-result" alt="ué...">
+            <h3>Você perdeu!</h3>
+            <p>A palavra era: <b class="word-result"></b></p>
+            <a href="./index.html" class="btn">Nova partida</a>
+        </div>
+
+    </div>
+    
+    <script src="main.js"></script>
+</body>
